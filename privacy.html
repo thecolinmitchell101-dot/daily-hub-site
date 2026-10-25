@@ -11,7 +11,7 @@
   <main>
     <p class="eyebrow"><a href="./">Daily Hub</a></p>
     <h1>Privacy policy</h1>
-    <p class="muted">Effective October 25, 2026</p>
+    <p class="muted">Effective October 25, 2026 · updated October 25, 2026 (bill reminders)</p>
 
     <p class="lede">
       Daily Hub is a personal planning tool that runs only on its owner's computer and is used only by its developer,
@@ -20,7 +20,9 @@
 
     <h2>Data it accesses</h2>
     <ul>
-      <li><strong>Gmail</strong> (<code>gmail.readonly</code>): message headers (sender, recipients, subject, date), short previews and labels of recent mail.</li>
+      <li><strong>Gmail</strong> (<code>gmail.readonly</code>): message headers (sender, recipients, subject, date), short previews and labels of recent mail.
+        For emails that look like bills or statements, the beginning of the message text is read to find the payee, amount and due date;
+        only those three facts are kept, not the text.</li>
       <li><strong>Google Calendar</strong> (<code>calendar.readonly</code>): event titles, times, locations and attendees.</li>
       <li><strong>Inbox cleanup</strong> (<code>gmail.modify</code>, a separate permission granted only if the owner turns cleanup on):
         used only to apply labels, archive, or move to Trash messages the owner has reviewed and approved. It is never used to
@@ -29,8 +31,8 @@
 
     <h2>How it's used</h2>
     <p>
-      Only to show the owner his own day: a calendar view, a suggested task list, reminders about mail that needs a reply,
-      and suggested inbox cleanup batches that do nothing until he approves them. Data is not used for advertising,
+      Only to show the owner his own day: a calendar view, a morning briefing (including upcoming bills), a suggested task list,
+      reminders about mail that needs a reply, and suggested inbox cleanup batches that do nothing until he approves them. Data is not used for advertising,
       is not sold, and is not used to build profiles of anyone.
     </p>
 
@@ -42,8 +44,8 @@
 
     <h2>Who it's shared with</h2>
     <p>
-      To write the daily plan and cleanup suggestions, short excerpts (sender, subject, date and preview) are sent to
-      Anthropic's Claude API for processing. Anthropic does not use API data to train its models by default.
+      To write the daily plan, the briefing and cleanup suggestions, short excerpts (sender, subject, date and preview, and for
+      bill emails the beginning of the text) are sent to Anthropic's Claude API for processing. Anthropic does not use API data to train its models by default.
       No other party receives Google user data, and no person other than the owner reads it.
     </p>
 
